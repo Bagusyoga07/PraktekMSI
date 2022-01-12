@@ -19,3 +19,5 @@ Route::get('/', function () {
 });
 
 Route::get('/barang',[BarangController::class,'index'])->name('barang');
+Route::get('/tambahbarang',[BarangController::class,'tambahbarang'])->name('tambahbarang');
+Route::POST('/insertdata',[BarangController::class,'insertdata'])->name('insertdata');

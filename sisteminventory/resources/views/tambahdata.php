@@ -11,38 +11,33 @@
     <title>Data Barang</title>
   </head>
   <body>
-    <h1 class="text-center mb-4">Data Barang</h1>
+    <h1 class="text-center mb-4">Tambah Data Barang</h1>
 
    <div class="container">
-   <button type="button" class="btn btn-success">Tambah +</button>
-       <div class="row">
-       <table class="table">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Nama Barang</th>
-      <th scope="col">Jenis Barang</th>
-      <th scope="col">Jumlah</th>
-      <th scope="col">Aksi</th>
-    </tr>
-  </thead>
-  <tbody>
-      @foreach ($data as $row)
-      <tr>
-        <th scope="row">{{ $row->id }}</th>
-        <td>{{ $row->nama}} </td>
-        <td>{{ $row->jenis}}</td>
-        <td>{{ $row->jumlah}}</td>
-        <td>
-        <button type="button" class="btn btn-danger">Delete</button>
-      <button type="button" class="btn btn-info">Edit</button>
-        </td>
-      </tr>
-      @endforeach
-    
-    
-  </tbody>
-</table>
+   
+       <div class="row justify-content-center">
+         <div class="col-8">
+         <div class="card">
+            <div class="card-body">
+            <form action="/insertdata" method="POST" enctype="multipart/form-data">
+          
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Nama Barang</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Jenis Barang</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Jumlah Barang</label>
+                <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            </div>
+          </div>
+         </div>
 
         </div>
     </div>
